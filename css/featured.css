@@ -1,0 +1,106 @@
+/* Featured Section Styling */
+#featured-products {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1.5rem; /* Padding adjusted for smaller screens */
+    min-height: 500px; /* Ensures section has a minimum height */
+    background: linear-gradient(180deg, #FAFAFA 0%, #E6F0FA 100%); /* Gradient background */
+    font-family: 'Cormorant Garamond', serif; /* Custom font for the section */
+}
+
+/* Heading Styling */
+#featured-products h2 {
+    font-size: 2.2rem;
+    margin-bottom: 2.5rem;
+    color: #2E3B4E;
+    letter-spacing: 2px;
+    position: relative;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#featured-products h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 1px;
+    background: #A3C7D6;
+    margin: 0.75rem auto; 
+}
+
+/* Content Container Styling */
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem; 
+    flex-wrap: wrap; 
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Product Card Styling */
+.product-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+    width: 200px;
+    margin: 10px;
+    background: rgba(255, 255, 255, 0.95); 
+    box-shadow: 0 2px 15px rgba(163, 199, 214, 0.2); 
+    transition: transform 0.3s ease; 
+}
+
+.product-card:hover {
+    transform: translateY(-5px); 
+}
+
+/* Product Image Styling */
+.product-card img {
+    max-width: 100%;
+    border-radius: 8px;
+    height: 180px;
+    object-fit: cover; 
+}
+
+/* Responsive Styles for Medium Screens */
+@media (max-width: 992px) {
+    .content {
+        gap: 1.5rem; 
+    }
+}
+
+/* Responsive Styles for Smaller Screens */
+@media (max-width: 768px) {
+    #featured-products {
+        padding: 2rem 1rem; 
+    }
+    
+    #featured-products h2 {
+        font-size: 1.8rem; 
+    }
+    
+    .content {
+        gap: 1rem; 
+    }
+    
+    .product-card {
+        width: calc(50% - 2rem);
+        margin: 8px;
+    }
+}
+
+/* Responsive Styles for Mobile Screens */
+@media (max-width: 480px) {
+    .product-card {
+        width: 100%;
+        max-width: 280px;
+    }
+    
+    #featured-products h2 {
+        font-size: 1.5rem; 
+    }
+}

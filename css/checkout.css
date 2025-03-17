@@ -1,0 +1,323 @@
+/* Container for the checkout page, with max width and centered layout */
+.checkout-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Styling for the checkout header section */
+.checkout-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.checkout-header h1 {
+    font-size: 2.2rem;
+    color: #2E3B4E;
+    margin-bottom: 1.5rem;
+}
+
+/* Checkout steps container to display the steps horizontally */
+.checkout-steps {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+/* Individual step container with alignment and positioning */
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+/* Styling for the step number circle */
+.step-number {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #f1f1ed;
+    border: 1px solid #A3C7D6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+/* Styling for the step name text */
+.step-name {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Active step styles */
+.step.active .step-number {
+    background-color: #A3C7D6;
+    color: white;
+    border-color: #A3C7D6;
+}
+
+.step.active .step-name {
+    color: #2E3B4E;
+    font-weight: 600;
+}
+
+/* Completed step styles */
+.step.completed .step-number {
+    background-color: #6fb1a5;
+    color: white;
+    border-color: #6fb1a5;
+}
+
+/* Divider between steps */
+.step-divider {
+    width: 60px;
+    height: 1px;
+    background-color: #dcdcdc;
+    margin: 0 10px;
+}
+
+/* Layout for the checkout content, split into form and sidebar */
+.checkout-content {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 2rem;
+}
+
+/* Form container styling with background and box shadow */
+.checkout-form-container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(163, 199, 214, 0.1);
+    padding: 2rem;
+}
+
+/* Section of the form with spacing */
+.form-section {
+    margin-bottom: 2rem;
+}
+
+/* Hidden form section (for step-by-step form display) */
+.form-section.hidden {
+    display: none;
+}
+
+/* Form section header styling */
+.form-section h2 {
+    font-size: 1.5rem;
+    color: #2E3B4E;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #f1f1ed;
+}
+
+/* Grouping form elements */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+/* Layout for form rows with two columns */
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+/* Label styling for form inputs */
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #555;
+    font-weight: 500;
+}
+
+/* General input field styles */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+/* Focused input field styles */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+select:focus {
+    border-color: #A3C7D6;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(163, 199, 214, 0.2);
+}
+
+/* Grouping checkbox options */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-group input {
+    margin-right: 0.5rem;
+}
+
+.checkbox-group label {
+    margin-bottom: 0;
+}
+
+/* Button row at the bottom of the form */
+.button-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+/* Shipping options container */
+.shipping-options {
+    margin-bottom: 2rem;
+}
+
+/* Individual shipping option item */
+.shipping-option {
+    margin-bottom: 1rem;
+}
+
+/* Label styling for each shipping option */
+.shipping-option label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem;
+    flex-wrap: wrap;
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Hide the radio buttons but still make them functional */
+.shipping-option input {
+    display: none;
+}
+
+/* Highlight selected shipping option */
+.shipping-option input:checked + label {
+    border-color: #A3C7D6;
+    background-color: rgba(163, 199, 214, 0.1);
+}
+
+/* Display details for each shipping option */
+.shipping-option-details {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Shipping option name style */
+.shipping-name {
+    font-weight: 600;
+    color: #2E3B4E;
+}
+
+/* Shipping duration text style */
+.shipping-duration {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* Shipping price style */
+.shipping-price {
+    margin-top: 0.5rem;
+    width: 100%;
+    text-align: right;
+    font-weight: 600;
+    color: #2E3B4E;
+}
+
+/* Payment option container for radio buttons */
+.payment-options {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.payment-option {
+    flex: 1;
+}
+
+/* Styling for each payment option label */
+.payment-option label {
+    display: block;
+    text-align: center;
+    padding: 1rem;
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Hide the payment radio buttons but keep them functional */
+.payment-option input {
+    display: none;
+}
+
+/* Highlight selected payment option */
+.payment-option input:checked + label {
+    border-color: #A3C7D6;
+    background-color: rgba(163, 199, 214, 0.1);
+    color: #2E3B4E;
+    font-weight: 600;
+}
+
+/* Sidebar for order summary, remains sticky on scroll */
+.order-sidebar {
+    position: sticky;
+    top: 20px;
+}
+
+/* Container for the order summary box */
+.order-summary-container {
+    background-color: #f9f9f7;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(163, 199, 214, 0.1);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Order summary header styling */
+.order-summary-container h3 {
+    font-size: 1.3rem;
+    color: #2E3B4E;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+/* List of items in the sidebar */
+.sidebar-items {
+    margin-bottom: 1.5rem;
+}
+
+/* Styling for each item in the sidebar list */
+.sidebar-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+/* Item image in the order summary */
+.sidebar-item-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-right: 0.75rem;
+}
